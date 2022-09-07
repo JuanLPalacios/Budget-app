@@ -5,6 +5,12 @@ class User < ApplicationRecord
 
   validates :name, presence: { allow_blank: false }
 
-  has_many :expenses
+  has_many :expenses, foreign_key: 'author_id'
   has_many :groups
+
+  def total_expenses
+    return @total unless @total.nil?
+
+    @total = expenses.inject(0) { |sum, expense| sum + expense.amount }
+  end
 end

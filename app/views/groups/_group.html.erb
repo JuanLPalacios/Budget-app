@@ -1,0 +1,14 @@
+<article id="<%= dom_id group %>" class="group-card card">
+  <div class="group-card-icon">
+    <%= content_tag :span, group.icon, class: group.icon %>
+  </div>
+  <div class="group-card-contet">
+    <h2>
+      <%= group.name %>
+      <b>
+        <%= number_to_currency group.total %>
+      </b>
+    </h2>
+    <%= time_tag group.created_at %>
+  </div>
+</article>

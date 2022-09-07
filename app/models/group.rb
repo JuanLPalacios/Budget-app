@@ -5,4 +5,10 @@ class Group < ApplicationRecord
   belongs_to :user
   has_many :group_expenses, dependent: :delete_all
   has_many :expenses, through: :group_expenses
+
+  def total
+    return @total unless @total.nil?
+
+    @total = expenses.inject(0) { |sum, expense| sum + expense.amount }
+  end
 end

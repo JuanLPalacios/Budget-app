@@ -1,0 +1,31 @@
+:root {
+  --main-color: #3778c2;
+  --alt-text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: inherit;
+  color: inherit;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn:hover {
+  filter: contrast(0.5) brightness(1.2);
+}
+
+.btn.btn-blue {
+  background: var(--main-color);
+  color: var(--alt-text-color);
+}

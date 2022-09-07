@@ -1,0 +1,19 @@
+
+section.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.splash-logo {
+  display: flex;
+  width: 70vw;
+  height: calc(100vh - 6rem);
+  align-self: center;
+  flex: 1 1 auto;
+}
+
+.splash-actions {
+  display: flex;
+  flex-direction: column;
+}

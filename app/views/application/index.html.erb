@@ -1,0 +1,10 @@
+<section class="splash">
+  <div class="splash-logo">
+    <%= image_tag "Logo.svg" %>
+  </div>
+  <div class="splash-actions">
+    <%= link_to "Log in", new_session_path(:user), class: 'btn btn-blue' %>
+    <%= link_to "Sign up", new_registration_path(:user), class: 'btn' %>
+  </div>
+</section>
+  

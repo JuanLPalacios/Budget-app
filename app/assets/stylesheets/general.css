@@ -1,6 +1,13 @@
 :root {
   --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
+  --text-color2: #757b82;
+  --text-color3: #9b9fa4;
+  --text-color4: #cdcfd1;
   --alt-text-color: #fff;
+  --field-color: #fff;
+  --bg-color: #f1f3f2;
 }
 
 * {
@@ -10,6 +17,17 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn {
@@ -28,4 +46,30 @@ body {
 .btn.btn-blue {
   background: var(--main-color);
   color: var(--alt-text-color);
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: var(--main-color);
+  color: var(--alt-text-color);
+  height: 3rem;
+}
+
+header.navbar > * {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+header.navbar > h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }

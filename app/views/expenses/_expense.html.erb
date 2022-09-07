@@ -1,0 +1,11 @@
+<article class="expense-item">
+  <div class="row">
+    <h3><%= expense.name %></h3>
+    <b><%= number_to_currency expense.amount %></b>
+  </div>
+  <div class="row">
+    <p>
+      <%= time_tag @group.created_at %>
+    </p>
+  </div>
+</article>

@@ -1,0 +1,14 @@
+
+.expense-item time::before {
+  content: 'M';
+  margin-right: 10px;
+}
+
+.expenses .list .card {
+  padding: 20px;
+}
+
+.expenses .card > section + section {
+  border-top: solid 1px var(--text-color3);
+  padding-top: 1rem;
+}

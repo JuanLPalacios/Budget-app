@@ -1,0 +1,53 @@
+<div class="expenses container">
+
+  <header class="navbar">
+    <%= link_to groups_path do %>
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+    <% end %>
+    <h1>Expenses</h1>
+    <div></div>
+  </header>
+
+  <main>
+    <div class="list">
+      <div class="card">
+
+        <section>
+          <div class="group-card">
+            <div class="group-card-icon">
+              <%= content_tag :span, @group.icon, class: @group.icon %>
+            </div>
+            <h2 class="group-card-contet">
+              <%= @group.name %>
+            </h2>
+          </div>
+          <p>
+            <%= time_tag @group.created_at %>
+          </p>
+        </section>
+
+        <section>
+          <p class="notice"><%= notice %></p>
+          <% @expenses.each do |expense| %>
+          <%= render expense %>
+          <% end %>
+        </section>
+
+        <section>
+          <div class="row">
+            <h3>TOTAL GROUP EXPENSES</h3>
+            <b><%= number_to_currency @group.total %></b>
+          </div>
+        </section>
+      
+      
+      </div>
+    </div>
+  </main>
+
+  <div class="card green list">
+    <%= link_to "New expense", new_group_expense_path(params[:group_id]), class: "btn btn-border"  %>
+  </div>
+</div>

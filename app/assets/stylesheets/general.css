@@ -79,7 +79,8 @@ time {
   padding: 2rem 0 0 1rem;
   background: var(--main-color);
   align-items: center;
-  transition: 0.5s;
+  transition: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .menu-proxy:focus-within .menu {

@@ -3,7 +3,8 @@ class Group < ApplicationRecord
              directions_car school apartment].freeze
 
   validates :name, presence: { allow_blank: false }
-  validates :icon, presence: { allow_blank: false }
+  validates :icon, presence: { allow_blank: false },
+                   inclusion: { in: ICONS }
 
   belongs_to :user
   has_many :group_expenses, dependent: :delete_all

@@ -1,0 +1,39 @@
+.group-card {
+  justify-content: space-between;
+  align-items: stretch;
+  display: flex;
+  gap: 10px;
+}
+
+.group-card-icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--second-color);
+  color: var(--alt-text-color);
+  border-radius: 3px;
+}
+
+.group-card-contet {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.group-card-contet > h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.groups .list {
+  gap: 10px;
+}
+
+.group-card-icon > span {
+  font-size: 4rem;
+}

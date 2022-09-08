@@ -8,7 +8,7 @@ section.splash {
 .splash-logo {
   display: flex;
   width: 70vw;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 6.4rem);
   align-self: center;
   flex: 1 1 auto;
 }

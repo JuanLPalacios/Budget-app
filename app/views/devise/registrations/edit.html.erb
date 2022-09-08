@@ -3,11 +3,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <header class="navbar">
-    <%= link_to :back do %>
-    <span class="material-symbols-outlined">
-      arrow_back
-    </span>
-  <% end %>
+    <%= link_to root_path do %>
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+    <% end %>
     <h1>Sign up</h1>
     <%= f.submit "Sign up" %>
   </header>

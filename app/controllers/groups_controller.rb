@@ -1,8 +1,8 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group
-    .includes( :expenses)
-    .where(user: current_user)
+      .includes(:expenses)
+      .where(user: current_user)
   end
 
   def new

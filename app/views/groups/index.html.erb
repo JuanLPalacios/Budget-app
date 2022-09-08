@@ -11,8 +11,10 @@
       <b><%= number_to_currency current_user.total_expenses %></b>
     </div>
   </div>
-
-  <p class="notice"><%= notice %></p>
+  
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
 
   <main>  
     <div class="list">

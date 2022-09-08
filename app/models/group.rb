@@ -1,4 +1,7 @@
 class Group < ApplicationRecord
+  ICONS = %w[family_restroom house stadia_controller inventory inventory_2 payments savings movie
+             directions_car school apartment].freeze
+
   validates :name, presence: { allow_blank: false }
   validates :icon, presence: { allow_blank: false }
 

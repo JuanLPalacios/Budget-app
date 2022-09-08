@@ -1,0 +1,37 @@
+<%= form_with(model: group) do |form| %>
+<header class="navbar">
+  <%= link_to groups_path do %>
+    <span class="material-symbols-outlined">
+      arrow_back
+    </span>
+  <% end %>
+  <h1>New Group</h1>
+  <%= form.submit %>
+</header>
+  <% if group.errors.any? %>
+    <div class="errors">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: :name %>
+  </div>
+
+  
+  <div class="field">
+    <%= form.collection_radio_buttons :icon, Group::ICONS, :to_s, :to_s, {}, {onChange: 'document.activeElement.blur()'} do |option| %>
+      <%= option.radio_button %>
+      <%= option.label do %>
+        <span class="material-symbols-outlined"><%= option.value %></span>
+        <%= option.value %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

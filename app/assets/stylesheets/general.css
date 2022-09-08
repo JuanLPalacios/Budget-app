@@ -5,8 +5,10 @@
   --text-color2: #757b82;
   --text-color3: #9b9fa4;
   --text-color4: #cdcfd1;
+  --error-color: #f00;
   --alt-text-color: #fff;
   --field-color: #fff;
+  --field-error-color: #ffeaea;
   --bg-color: #f1f3f2;
 }
 
@@ -52,6 +54,18 @@ time {
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.notice {
+  background: var(--field-color);
+  padding: 1rem;
+  color: var(--second-color);
+}
+
+.errors {
+  background: var(--field-color);
+  color: var(--error-color);
+  padding: 1rem;
 }
 
 .container > main {
@@ -110,6 +124,7 @@ header.navbar > h1 {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 1.2rem;
+  padding: 0;
 }
 
 .card {

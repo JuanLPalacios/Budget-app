@@ -1,6 +1,8 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.where(user: current_user)
+    @groups = Group
+    .includes( :expenses)
+    .where(user: current_user)
   end
 
   def new

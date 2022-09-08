@@ -5,12 +5,13 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    return super if user_signed_in?
+    return super if user_signed_in? || devise_controller?
 
     redirect_to root_path, notice: 'Please Login first!'
   end
 
   def after_sign_in_path_for(_resource)
+    flash.clear
     groups_path
   end
 

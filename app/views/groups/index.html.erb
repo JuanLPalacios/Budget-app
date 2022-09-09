@@ -1,0 +1,50 @@
+<div class="groups container">
+  <header class="navbar">
+    <div class="menu-proxy">
+      <a href="#menu" data-turbo="false">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </a>
+      <div class="menu">
+        <div class="text-center">
+          <div class="group-card-icon">
+            <%= content_tag :span, 'person', class: 'material-symbols-outlined' %>
+          </div>
+          <p><%= current_user.name %></p>
+        </div>
+        <ul>
+          <li>
+            <%= button_to 'Log out',  destroy_user_session_path, method: :delete  %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h1>Groups</h1>
+    <div></div>
+  </header>
+
+  <div class="card">
+    <div class="row">
+      <span>Total</span>
+      <b><%= number_to_currency current_user.total_expenses %></b>
+    </div>
+  </div>
+  
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <main>  
+    <div class="list">
+      <% @groups.each do |group| %>
+        <%= link_to group_expenses_path(group) do %>
+          <%= render group %>
+        <% end %>
+      <% end %>
+    </div>
+  </main>
+  <div class="card green list">
+    <%= link_to "New group", new_group_path, class: "btn btn-border" %>
+  </div>
+</div>
